@@ -35,7 +35,8 @@ public class TestMock {
     public void getTotalTransactionsAmountWithTax() {
         Transaction transaction = new Transaction(6, 6000, "Cafe");
         IncomeTaxDept incomeTaxDeptMock = mock(IncomeTaxDept.class);
-        when(incomeTaxDeptMock.getTaxAmountByType(Mockito.any(), Mockito.any())).thenReturn(new Tax("new", 0));
+        //Tax structure is not implemented, pls stub and proceed with testing !!!!
+        when(incomeTaxDeptMock.getTaxAmountByType(Mockito.any(), Mockito.any())).thenReturn(new Tax("temp", 0)); //Stubbing the Tax Value
         Operations operations = new Operations(incomeTaxDeptMock);
         Assert.assertEquals(transaction.getAmount(), operations.getTotalTransactionsAmountWithTax(transaction));
     }
