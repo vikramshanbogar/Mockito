@@ -9,6 +9,10 @@ public class Operations {
 
     IncomeTaxDept incomeTaxDept;
 
+    public Operations(IncomeTaxDept incomeTaxDept) {
+        this.incomeTaxDept = incomeTaxDept;
+    }
+
     public IncomeTaxDept getIncomeTaxDept() {
         return incomeTaxDept;
     }
@@ -46,7 +50,6 @@ public class Operations {
     }
 
     public int getTotalTransactionsAmountWithTax(Transaction transaction) {
-        IncomeTaxDept incomeTaxDept = new IncomeTaxDept();
         Tax tax = incomeTaxDept.getTaxAmountByType(transaction, "CGST");
         int transactionAmount = transaction.getAmount();
         return transactionAmount + tax.getTaxAmt();
