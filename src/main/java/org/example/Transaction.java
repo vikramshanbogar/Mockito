@@ -4,10 +4,10 @@ import java.util.Date;
 
 public class Transaction {
 
-    int id;
-    int amount;
-    String description;
-    Date createdAt;
+    private int id;
+    private int amount;
+    private String description;
+    private Date createdAt;
 
     Tax tax;
 
