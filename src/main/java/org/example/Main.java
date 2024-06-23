@@ -11,7 +11,7 @@ public class Main {
 //        System.out.println(operations.OnCOndition(p -> p.getAmount() > 4000));
 
 
-        Set<Integer> set = new HashSet<>();
+        Set<Integer> set = new HashSet<>();// no order in displaying , but very fast because of hashing algorithm
         set.add(1);
         set.add(32);
         set.add(54);
@@ -19,7 +19,7 @@ public class Main {
         set.add(4);
         System.out.println(set);
 
-        Set<Integer> linkedHashSet = new LinkedHashSet<>();
+        Set<Integer> linkedHashSet = new LinkedHashSet<>();//same order as inserted , little slower than hash set but order is maintained
         linkedHashSet.add(1);
         linkedHashSet.add(32);
         linkedHashSet.add(54);
@@ -27,14 +27,13 @@ public class Main {
         linkedHashSet.add(4);
         System.out.println(linkedHashSet);
 
-        Set<Integer> treeSet = new TreeSet<>();
+        Set<Integer> treeSet = new TreeSet<>();//ascending order / natural ordering , used for storing in asc or desc 
         treeSet.add(1);
         treeSet.add(32);
         treeSet.add(54);
         treeSet.add(31);
         treeSet.add(4);
         System.out.println(treeSet);
-
-
+   
     }
 }
